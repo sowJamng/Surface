@@ -14,27 +14,72 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
+        title: Text('International Well Control Form Surface Vertical Well Kill Sheet(AOI Field Units)'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+                Text(
+              'FORMATION STRENGTH DATA: ',
             ),
-            Text(
-             '',
-              style: Theme.of(context).textTheme.headline4,
+            Text('SURFACE LEAK -OFF PRESSURE FORM'),
+           Row(
+    children:<Widget> [
+      Text('FORMATION STRENGH TEST'),
+      TextFormField(
+              decoration:InputDecoration(
+                   labelText:' (A)',
+                   hintText: 'psi'
+              ),
             ),
+            ],
+           ) ,
+              Row(
+    children:<Widget> [
+      Text('MUD WEIGHT AT TEST'),
+      TextFormField(
+              decoration:InputDecoration(
+                   labelText:' (B)',
+                   hintText: 'ppg'
+              ),
+            ),
+            ],
+           ) ,
+            Text(
+             'MAXIMUM ALLOWABLE MUD WEIGHT='
+            ),
+            Text('(B)+ (A)/SHOE T.V. DEPTH x 0.052 ='),
+             Row(
+              children:<Widget>[
+                 TextFormField(
+              decoration:InputDecoration(
+                   labelText:' (C)',
+                   hintText: 'ppg'
+              ),
+            ),
+
+              ],
+            ),
+            Text('INITIAL MAASP='),
+            Text('((C)-CURRENT MUD WEIGHT)x SHOE T.V.DEPTH x 0.052'),
+             TextFormField(
+              decoration:InputDecoration(
+                   labelText:' (C)',
+                   hintText: 'ppg',
+                   counterText: '='
+              ),
+            ),
+              
+            
           ],
         ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: null,
+      //   tooltip: 'valide',
+      //   child: Icon(Icons.add),
+      // ), 
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        tooltip: 'valide',
-        child: Icon(Icons.add),
-      ), 
     );
   }
 }
